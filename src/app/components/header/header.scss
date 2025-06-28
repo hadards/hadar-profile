@@ -31,7 +31,7 @@
   transition: max-height 0.3s ease;
   
   &.open {
-    max-height: 300px; // Reduced since no button
+    max-height: 400px; // Increased to accommodate 6 menu items
   }
 }
 
