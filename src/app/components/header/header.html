@@ -1,0 +1,56 @@
+<header class="fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-md h-16 md:h-20">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+    <div class="flex items-center justify-between h-full">
+      <!-- Logo/Name -->
+      <div class="flex items-center">
+        <img 
+          src="/assets/images/logo.png" 
+          alt="Hadar Dashty Logo" 
+          class="w-12 h-12 md:w-14 md:h-14 mr-3 rounded object-contain"
+          loading="lazy">
+        <div class="font-bold text-lg md:text-xl text-white">
+          Hadar Dashty
+        </div>
+      </div>
+      
+      <!-- Navigation Links - Desktop -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="nav-link" (click)="closeMobileMenu()">About</a>
+        <a href="#expertise" class="nav-link" (click)="closeMobileMenu()">Expertise</a>
+        <a href="#experience" class="nav-link" (click)="closeMobileMenu()">Experience</a>
+        <a href="#articles" class="nav-link" (click)="closeMobileMenu()">Articles</a>
+        <a href="#contact" class="nav-link" (click)="closeMobileMenu()">Contact</a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button 
+        class="md:hidden p-2 text-gray-300 hover:text-white" 
+        type="button"
+        (click)="toggleMobileMenu()"
+        [attr.aria-expanded]="isMobileMenuOpen"
+        aria-label="Toggle mobile menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            stroke-width="2" 
+            [attr.d]="isMobileMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'">
+          </path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div 
+      class="mobile-menu md:hidden bg-gray-800 rounded-lg mt-4"
+      [class.open]="isMobileMenuOpen">
+      <div class="flex flex-col space-y-2 p-4">
+        <a href="#about" class="nav-link text-lg py-2" (click)="closeMobileMenu()">About</a>
+        <a href="#expertise" class="nav-link text-lg py-2" (click)="closeMobileMenu()">Expertise</a>
+        <a href="#experience" class="nav-link text-lg py-2" (click)="closeMobileMenu()">Experience</a>
+        <a href="#articles" class="nav-link text-lg py-2" (click)="closeMobileMenu()">Articles</a>
+        <a href="#contact" class="nav-link text-lg py-2" (click)="closeMobileMenu()">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,33 @@
+// Main app component styles
+.min-h-screen {
+  scroll-behavior: smooth;
+}
+
+// Smooth scroll for anchor links with responsive padding
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px; // Mobile header height (h-16 = 64px)
+  
+  @media (min-width: 768px) {
+    scroll-padding-top: 80px; // Desktop header height (h-20 = 80px)
+  }
+}
+
+// Fix for mobile viewport issues
+body {
+  overflow-x: hidden; // Prevent horizontal scroll
+}
+
+// Ensure proper mobile header positioning
+header {
+  -webkit-transform: translateZ(0); // Hardware acceleration for mobile
+  transform: translateZ(0);
+  border: none !important; // Force remove any borders
+  box-shadow: none !important; // Force remove any shadows
+}
+
+// Remove any borders from sections
+section {
+  border-top: none !important;
+  border-bottom: none !important;
+}

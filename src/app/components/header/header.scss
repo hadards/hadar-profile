@@ -1,0 +1,43 @@
+.nav-link {
+  @apply text-gray-300 hover:text-blue-400 transition-colors duration-200 font-medium;
+  position: relative;
+  
+  // Only show underline on desktop
+  @media (min-width: 768px) {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #60a5fa, #22d3ee);
+      transition: width 0.3s ease;
+    }
+    
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-105 inline-block;
+}
+
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  
+  &.open {
+    max-height: 300px; // Reduced since no button
+  }
+}
+
+// Focus styles for accessibility
+.btn-primary:focus,
+.nav-link:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}

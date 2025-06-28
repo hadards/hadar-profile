@@ -2,12 +2,137 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>HadarPortfolio</title>
+  <title>Hadar Dashty - Senior Software & Data Leader</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="Senior Software & Data Leader with 15+ years experience in enterprise solutions, R&D, supply chain, and cross-industry development. Open to global opportunities.">
+  <meta name="keywords" content="software engineer, data leader, full-stack developer, enterprise solutions, technical leadership, microservices, angular, .net core, python">
+  <meta name="author" content="Hadar Dashty">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3b82f6">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hadar-dashty.vercel.app/">
+  <meta property="og:title" content="Hadar Dashty - Senior Software & Data Leader">
+  <meta property="og:description" content="End-to-end solutions architect with expertise across industries. Specializing in .NET Core, Python, Angular, and enterprise data solutions.">
+  <meta property="og:image" content="/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://hadar-dashty.vercel.app/">
+  <meta property="twitter:title" content="Hadar Dashty - Senior Software & Data Leader">
+  <meta property="twitter:description" content="End-to-end solutions architect with expertise across industries. Specializing in .NET Core, Python, Angular, and enterprise data solutions.">
+  <meta property="twitter:image" content="/assets/images/og-image.jpg">
+
+  <!-- Custom Favicon - Your Logo -->
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Hadar Dashty",
+    "jobTitle": "Senior Software & Data Leader",
+    "description": "Highly experienced Software & Data Leader with expertise in end-to-end solutions across multiple industries including medical technology, defense industry, R&D, and supply chain management.",
+    "url": "https://hadar-dashty.vercel.app",
+    "email": "hadards@gmail.com",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Haifa University",
+      "address": "Israel"
+    },
+    "sameAs": [
+      "www.linkedin.com/in/hadar-dashty-damari"
+    ],
+    "knowsAbout": [
+      "Software Engineering",
+      "Data Architecture",
+      "Technical Leadership",
+      "Full-Stack Development",
+      "Enterprise Solutions",
+      ".NET Core",
+      "Python",
+      "Angular",
+      "Azure",
+      "Microservices"
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Software & Data Leader",
+      "occupationLocation": {
+        "@type": "Place",
+        "name": "Global"
+      },
+      "skills": [
+        ".NET Core",
+        "Python",
+        "Angular",
+        "TypeScript",
+        "Azure",
+        "Microservices",
+        "Data Engineering",
+        "Team Leadership"
+      ]
+    }
+  }
+  </script>
+
+  <!-- Critical CSS for above-the-fold content -->
+  <style>
+    /* Critical CSS to prevent FOUC */
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111827;
+      color: #f9fafb;
+      line-height: 1.6;
+    }
+    
+    .loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+      color: white;
+      font-size: 1.2rem;
+    }
+    
+    .loading-spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #60a5fa;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 1rem;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <!-- Loading screen while Angular initializes -->
+    <div class="loading">
+      <div class="loading-spinner"></div>
+      <span>Loading Portfolio...</span>
+    </div>
+  </app-root>
 </body>
 </html>
